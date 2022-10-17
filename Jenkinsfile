@@ -10,7 +10,7 @@ pipeline
             {
             withMaven(maven : 'apache-maven-3.6.3')
             {
-                 sh 'mvn install'
+                 sh 'mvn clean install'
             }
             }
             
