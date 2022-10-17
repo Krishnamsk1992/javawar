@@ -1,9 +1,6 @@
 pipeline
 {
     agent any 
-    tools {
-        maven 'Maven_3.6.3' 
-    }
     stages
     {
       
@@ -11,11 +8,13 @@ pipeline
         {
             steps
             {
-            sh 'mvn clean install'
+            withMaven(maven : 'apache-maven-3.6.3')
+            {
+                 sh 'mvn install'
+            }
             }
             
-            
         }
-       
+        
     }
 }
