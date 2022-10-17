@@ -8,7 +8,7 @@ pipeline
         {
             steps
             {
-            withMaven(maven : 'maven_3_8_4')
+            withMaven(maven : 'maven_3_6_3')
             {
                  sh 'mvn clean install'
             }
