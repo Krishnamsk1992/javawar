@@ -15,13 +15,6 @@ pipeline
             }
             
         }
-       # stage ('deploy the code ')
-       # {
-       #     steps
-       #     {
-       #         sh ' cp -R /var/lib/jenkins/workspace/declarative_pipeline/target/* /opt/apache-tomcat-8.0.11/webapps/ '
-       #     }
-            
-       # }
+      
     }
 }
