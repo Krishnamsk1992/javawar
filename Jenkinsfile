@@ -14,7 +14,6 @@ pipeline
             }
             }
             
-        }
         stage ('deploy the code ')
         {
             steps
