@@ -10,12 +10,17 @@ pipeline
             {
             withMaven(maven : 'Maven_Home')
             {
-                 sh 'mvn clean install'
+                 sh 'mvn install'
             }
             }
-        }   
             
+        }
         stage ('deploy the code ')
+        {
+            steps
+            {
+                sh ' cp -R /var/lib/jenkins/workspace/declerative/target/* /opt/apache-tomcat-9.0.8/webapps/ '
+            }
             
         }
     }
